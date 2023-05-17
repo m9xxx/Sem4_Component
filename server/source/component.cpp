@@ -25,12 +25,12 @@ Server::Server()
     HRESULT resFactory = CoGetClassObject(Constants::CLSID_Server, CLSCTX_INPROC_SERVER, NULL, Constants::IID_IClassFactory, (void**) &MCF);
 
     cout << "Server::Constructor::CoGetClassObject" << endl;
-
+    
     if(!SUCCEEDED(resFactory)){
         cout << "No Factory" << endl;
     }
     cout << "Server::Constructor::CreateInstance" << endl;
-    HRESULT resInstance = MCF->CreateInstance(NULL, Constants::IID_IPower, (void**) &ppm);
+    HRESULT resInstance = MCF->CreateInstance(NULL, Constants::IID_IPower, (void**) &pm);
 
     
 
@@ -39,7 +39,7 @@ Server::Server()
         cout << "No instance" << endl;
     }
 
-    HRESULT resQuery = ppm->QueryInterface(Constants::IID_IPower, (void**) &pm);
+    HRESULT resQuery = pm->QueryInterface(Constants::IID_IPower, (void**) &pm);
 
     cout << "Server::Constructor::QueryInterface" << endl;
 
@@ -98,7 +98,7 @@ HRESULT Server::set_num()
   cout << "Set num func, enter num" << endl;
   cin >> this->num;
   cout << "Num entered succesfully, num = " << this->num << endl;  
-  return S_OK_;
+  return S_OK;
 }
 
 HRESULT Server::pow_num() 
@@ -106,25 +106,24 @@ HRESULT Server::pow_num()
   cout << "Set pow func, enter pow" << endl;
   cin >> this->pownum;
   cout << "Pow entered succesfully, pow = " << this->pownum << endl;  
-  return S_OK_;
+  return S_OK;
 }
 
 HRESULT Server::res()
 {	 	    		
-  a = this->num;
-  b = this->pownum;
+  int a = this->num;
+  int b = this->pow_num;
   for (int i = 0; i < b; i++){
     this->result *= a;
   }
   cout << "result = " << this->result << endl;
-  return S_OK_;
+  return S_OK;
 
 }
 
 Server::~Server()
 {
     cout<<"Server::~Server()"<<endl;
-    dm->Release();
     pm->Release();
 }
 

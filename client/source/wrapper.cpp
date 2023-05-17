@@ -26,14 +26,14 @@ BServer::BServer()
         throw AServer("No Factory");
     }
     
-    HRESULT resInstance = MCF->CreateInstance(NULL, Constants::IID_IPower, (void**) &ppm);
+    HRESULT resInstance = MCF->CreateInstance(NULL, Constants::IID_IPower, (void**) &pm);
 
     if (!SUCCEEDED(resInstance))
     {
         throw AServer("No instance");
     }
 
-    HRESULT resQuery = ppm->QueryInterface(Constants::IID_IPower, (void**) &pm);
+    HRESULT resQuery = pm->QueryInterface(Constants::IID_IPower, (void**) &pm);
 
     if (!SUCCEEDED(resQuery))
     {
@@ -58,14 +58,14 @@ BServer::BServer(int license[])
     }
 
 
-    HRESULT resInstance = MCF->CreateInstance(NULL, Constants::IID_IPower, (void**) &ppm);
+    HRESULT resInstance = MCF->CreateInstance(NULL, Constants::IID_IPower, (void**) &pm);
 
     if (!SUCCEEDED(resInstance))
     {
         throw AServer("No license");
     }
 
-    HRESULT resQuery = ppm->QueryInterface(Constants::IID_IPower, (void**) &pm);
+    HRESULT resQuery = pm->QueryInterface(Constants::IID_IPower, (void**) &pm);
 
     if (!SUCCEEDED(resQuery))
     {
@@ -77,21 +77,20 @@ BServer::BServer(int license[])
 
 HRESULT __stdcall BServer::set_num()
 {
-    return dm->set_num();
+    return pm->set_num();
 }
 
 HRESULT __stdcall BServer::pow_num()
 {
-    return dm->pow_num();
+    return pm->pow_num();
 }
 
 HRESULT __stdcall BServer::res(){
-    return dm->res();
+    return pm->res();
 }
 
 BServer::~BServer()
 {
-    dm->Release();
     pm->Release();
 
     CoUninitialize();
