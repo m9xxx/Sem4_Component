@@ -27,7 +27,7 @@ class BServer
         BServer(int license[]);
 
         virtual HRESULT __stdcall set_num();
-        virtual HRESULT __stdcall pow_num();
+        virtual HRESULT __stdcall calc_pow_num();
         virtual HRESULT __stdcall res();
 
         ~BServer();

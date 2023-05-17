@@ -17,13 +17,13 @@ class Server : public IPower{
         virtual ULONG __stdcall Release();
 
         virtual HRESULT __stdcall set_num();
-        virtual HRESULT __stdcall pow_num();
+        virtual HRESULT __stdcall calc_pow_num();
         virtual HRESULT __stdcall res();
         
         ~Server();
 };
 
-class PowerClassFactory : public IClassFactory, public IPowerClassFactory{
+class PowerClassFactory : public IClassFactory, public IPowerFactory{
     private:
         int refCount;
     public:

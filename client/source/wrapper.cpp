@@ -80,9 +80,9 @@ HRESULT __stdcall BServer::set_num()
     return pm->set_num();
 }
 
-HRESULT __stdcall BServer::pow_num()
+HRESULT __stdcall BServer::calc_pow_num()
 {
-    return pm->pow_num();
+    return pm->calc_pow_num();
 }
 
 HRESULT __stdcall BServer::res(){

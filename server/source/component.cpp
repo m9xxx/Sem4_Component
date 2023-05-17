@@ -5,7 +5,7 @@ IID Constants::IID_IUnknown = {0x00000000,0x0000,0x0000,{0xC0,0x00,0x00,0x00,0x0
 IID Constants::IID_IClassFactory = {0x00000001,0x0000,0x0000,{0xC0,0x00,0x00,0x00,0x00,0x00,0x00,0x46}};
 
 IID Constants::IID_IPower = {0x00000001,0x0000,0x0000,{0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00}};
-IID Constants::IID_IPowerClassFactory = {0x00000011,0x0000,0x0000,{0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00}};
+IID Constants::IID_IPowerFactory = {0x00000011,0x0000,0x0000,{0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00}};
 
 //91A42CAA-2577-4E80-934E-07DE64502FD6
 CLSID Constants::CLSID_Server = {0x91A42CAA,0x2577,0x4E80,{0x93,0x4E,0x07,0xDE,0x64,0x50,0x2F,0xD6}};
@@ -101,11 +101,11 @@ HRESULT Server::set_num()
   return S_OK;
 }
 
-HRESULT Server::pow_num() 
+HRESULT Server::calc_pow_num() 
 {
   cout << "Set pow func, enter pow" << endl;
-  cin >> this->pownum;
-  cout << "Pow entered succesfully, pow = " << this->pownum << endl;  
+  cin >> this->pow_num;
+  cout << "Pow entered succesfully, pow = " << this->pow_num << endl;  
   return S_OK;
 }
 
@@ -141,8 +141,8 @@ PowerClassFactory::~PowerClassFactory(){
 
 HRESULT PowerClassFactory::QueryInterface(const IID& iid, void** object){
     cout<<"PowerClassFactory::QueryInterface"<<endl;
-        if (iid == Constants::IID_IPowerClassFactory){
-            *object = (IUnknown*) (IPowerClassFactory*) this;
+        if (iid == Constants::IID_IPowerFactory){
+            *object = (IUnknown*) (IPowerFactory*) this;
         }
         else{
             *object = NULL;

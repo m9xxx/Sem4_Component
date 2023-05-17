@@ -13,7 +13,7 @@ class Constants{
      static IID IID_IClassFactory;
 
      static IID IID_IPower;
-     static IID IID_IPowerClassFactory;
+     static IID IID_IPowerFactory;
 
      static CLSID CLSID_Server;
      static CLSID CLSID_PowerFactory;
@@ -22,11 +22,11 @@ class Constants{
 class IPower : public IUnknown{
     public:
         virtual HRESULT __stdcall set_num() = 0;
-        virtual HRESULT __stdcall pow_num() = 0;
+        virtual HRESULT __stdcall calc_pow_num() = 0;
         virtual HRESULT __stdcall res() = 0;
 };
 
-class IPowerClassFactory : public IUnknown{
+class IPowerFactory : public IUnknown{
     public:
         virtual HRESULT __stdcall CreateInstance(const IID& iid, void** object, int license[]) = 0;
 };

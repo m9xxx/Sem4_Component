@@ -20,7 +20,7 @@ int main() {
 	try{
 		BServer b;
 		b.set_num();
-		b.pow_num();
+		b.calc_pow_num();
 		b.res();
 	 }catch(AServer& a){
 		std::cout << a.GetMessage() << std::endl;
