@@ -16,7 +16,7 @@ class Constants{
      static IID IID_IPowerFactory;
 
      static CLSID CLSID_Server;
-     static CLSID CLSID_PowerFactory;
+     static CLSID CLSID_PowerClassFactory;
 };
 
 class IPower : public IUnknown{
@@ -26,7 +26,8 @@ class IPower : public IUnknown{
         virtual HRESULT __stdcall res() = 0;
 };
 
-class IPowerFactory : public IUnknown{
+class IPowerFactory : public IUnknown
+{
     public:
         virtual HRESULT __stdcall CreateInstance(const IID& iid, void** object, int license[]) = 0;
 };

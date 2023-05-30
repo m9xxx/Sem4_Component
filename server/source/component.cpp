@@ -17,6 +17,7 @@ Server::Server()
   cout << "Server::Constructor" << endl;
 
   refCount = 0;
+}
 
   CoInitialize(NULL);
 
