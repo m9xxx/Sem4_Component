@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\cpp",
+    "\\cpp\\build",
+    "\\cpp\\source",
+    "\\cpp\\source\\client",
+    "\\cpp\\source\\client\\lib",
+    "\\cpp\\source\\server",
+    "\\cpp\\source\\server2",
+    "\\reg"
+  ],
+  "SelectedNode": "\\cpp\\source\\server\\Components.cpp",
+  "PreviewInSolutionExplorer": false
+}
