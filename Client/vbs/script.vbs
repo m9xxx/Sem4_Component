@@ -1,6 +1,6 @@
-set Maxon = CreateObject("M9X")
-set Maxon = CreateObject("9A9")
+set M9X = CreateObject("M9X")
+' set M9X = CreateObject("9A9")
 
-Maxon.set_num
-Maxon.calc_pow_num
-Maxon.res
+M9X.set_num
+M9X.calc_pow_num
+M9X.res
