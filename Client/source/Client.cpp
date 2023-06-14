@@ -104,6 +104,8 @@ std::cout << "No QueryInterface" << std::endl;
 ip->set_num();
 ip->calc_pow_num();
 ip->res();
+// ir->set_num();
+ir->res_root();
 PCF->Release();
   
 IDispatch* pDisp = NULL;

@@ -108,10 +108,14 @@ HRESULT Server2::set_num()
 
 HRESULT Server2::res_root()
 {
-    int a = this->num;
-    this->root_result = a;
-    this->root_result *= sqrt(this->num);
-    cout << "result : " << "sqrt(" << this->num << ")" << " = " << this->root_result << endl;
+    cout << "Set num for square rooting" << endl;
+    int a = 0;
+    cin >> a;
+    // int a = this->num;
+    // this->root_result = a;
+    // this->root_result *= sqrt(a);
+    cout << "result : " << "sqrt(" << a << ")" << " = " << sqrt(a) << endl;
+    // cout << sqrt(9) << endl;
     return S_OK;
 }
 

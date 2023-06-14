@@ -20,6 +20,7 @@ class IRoot : public IUnknown
 {
     public:
         virtual HRESULT __stdcall res_root() = 0;
+        virtual HRESULT __stdcall set_num() = 0;
 };
 
 class IRootFactory : public IUnknown
