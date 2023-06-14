@@ -1,0 +1,6 @@
+﻿Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\WOW6432Node\CLSID\{8428A10A-C00C-4A71-A2AA-917E6FE388D4}]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\WOW6432Node\CLSID\{8428A10A-C00C-4A71-A2AA-917E6FE388D4}\InprocServer32]
+@="C:\\Users\\M9X\\Desktop\\Sem4_Component\\dlls\\Server.dll"

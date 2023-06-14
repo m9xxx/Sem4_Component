@@ -1,0 +1,6 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{89F2E888-DE98-4EF6-B29C-98E9F9CD00D8}]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{89F2E888-DE98-4EF6-B29C-98E9F9CD00D8}\InprocServer32]
+@="C:\\Users\\M9X\\Desktop\\Sem4_Component\\dlls\\Server2.dll"
